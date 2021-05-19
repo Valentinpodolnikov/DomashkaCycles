@@ -15,6 +15,7 @@ public class Main {
 
         Scanner input = new Scanner(System.in);
 
+
         System.out.print("Введите радиус поля: ");
         radiusField = input.nextInt();
 

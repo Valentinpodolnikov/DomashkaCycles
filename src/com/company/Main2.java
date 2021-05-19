@@ -1,32 +1,51 @@
 package com.company;
 
-import java.util.Scanner;
+
+import java.io.*;
+import java.util.*;
 
 public class Main2 {
     public static void main(String[] args) {
 
+          //Старая версия была через else if , обе не получается загрузить на сайт (Wrong answer)
+
+
         Scanner input = new Scanner(System.in);
+        PrintWriter out = new PrintWriter(System.out);
 
         int number;
 
-        System.out.print("Введите номер месяца: ");
+
         number = input.nextInt();
 
-        if(number==12){
-            System.out.println("Winter");
-        }
+        switch (number){
+            case 12:
+                out.println("Winter");
+                break;
+            case 1:
+            case 2:
+                out.println("Winter");
+                break;
+            case 3:
+            case 4:
+            case 5:
+                out.println("Spring");
+                break;
+            case 6:
+            case 7:
+            case 8:
+                out.println("Summer");
+                break;
+            case 9:
+            case 10:
+            case 11:
+                out.println("Autumn");
+                break;
+            default:
+                out.println("ERROR");
 
-        else if(1<=number && number<=2){
-            System.out.println("Winter");
         }
-        else if(3<=number && number<=5){
-            System.out.println("Spring");
-        }
-        else if(6<=number && number<=8){
-            System.out.println("Summer");
-        }
-        else if(9<=number && number<=11){
-            System.out.println("Autumn");
-        }
+        out.flush();
+
     }
 }
